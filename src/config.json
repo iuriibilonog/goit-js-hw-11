@@ -1,4 +1,7 @@
 {
   "key": "23766907-8949d781ce5b5ece952eeda6b",
-  "baseLink": "https://pixabay.com/api/"
+  "baseLink": "https://pixabay.com/api/",
+  "page": 1 ,
+  "per_page": 40
+  
 }
