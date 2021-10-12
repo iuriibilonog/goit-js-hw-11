@@ -20,7 +20,7 @@ window.addEventListener('scroll', async () => {
     config.page += 1;
     const { hits, totalHits } = await fetchPictures(inputNode.value);
     if (config.page > Math.ceil(totalHits / config.per_page)) {
-      Notiflix.Notify.failure('We are sorry, but you have reached the end of search results');
+      Notiflix.Notify.info('We are sorry, but you have reached the end of search results');
       loading.classList.add('hidden');
       isEnd = true;
     } else {
