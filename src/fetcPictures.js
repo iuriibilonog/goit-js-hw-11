@@ -9,7 +9,9 @@ export async function fetchPictures(q) {
   });
 
   const response = await axios.get(
-    `https://pixabay.com/api/?key=23766907-8949d781ce5b5ece952eeda6b&q=${q}&image_type=photo&${params.toString()}&orientation=horizontal&safesearch=true`,
+    `${config.baseLink}?${
+      config.key
+    }&q=${q}&${params.toString()}&orientation=horizontal&safesearch=true&image_type=photo`,
   );
   if (response.status >= 200 && response.status < 300) {
     return response.data;
