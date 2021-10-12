@@ -60,3 +60,11 @@ a.text {
 .hidden {
   display: none;
 }
+
+.loading {
+  position: fixed;
+  max-width: 50px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
