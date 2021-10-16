@@ -6,13 +6,13 @@ export async function fetchPictures(q) {
   const params = new URLSearchParams({
     per_page: config.per_page,
     page: config.page,
+    orientation: config.orientation,
+    safesearch: config.safesearch,
+    image_type: config.image_type,
   });
 
-  const response = await axios.get(
-    `${config.baseLink}?${
-      config.key
-    }&q=${q}&${params.toString()}&orientation=horizontal&safesearch=true&image_type=photo`,
-  );
+  const response = await axios(`${config.baseLink}?${config.key}&q=${q}&${params.toString()}`);
+
   if (response.status >= 200 && response.status < 300) {
     return response.data;
   }

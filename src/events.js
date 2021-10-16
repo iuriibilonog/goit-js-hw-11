@@ -2,6 +2,7 @@ import { fetchPictures } from './fetcPictures';
 import { showData } from './showData';
 import config from './config.json';
 import Notiflix from 'notiflix';
+import InfiniteScroll from 'infinite-scroll';
 
 const loading = document.querySelector('.loading');
 const searchForm = document.querySelector('.search-form');
